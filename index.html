@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">
+            <!-- section 1 -->
+            <div class="first">Todo List</div>
+
+            <!-- section msg -->
+            <div class="msg">
+                ds
+            </div>
+
+            <!-- section 2 -->
+            <div class="second">
+                <input type="text" class="second-input text-input" placeholder="Add your Task here...">
+                <input type="date" class="second-input date-input" >
+                <div class="second-tick"></div>
+            </div>
+
+            <!-- section 3 -->
+            <div class="third">
+                <select name="task" id="task" class="third-comp third-select">
+                    <option class="all" value="all">All</option>
+                    <option class="pending" value="Pending">Pending</option>
+                    <option class="completed" value="Completed">Completed</option>
+                </select>
+
+                <button class="third-comp third-delete">Delete All</button>
+            </div>
+
+            <!-- section 4 -->
+            <div class="fourth">
+                <table class="fourth-table">
+                    <thead>
+                        <tr>
+                            <th>TASK</th>
+                            <th>DUE DATE</th>
+                            <th>STATUS</th>
+                            <th>ACTIONS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="4" class="no-task">No task found</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        
+            
+    </div>
+</body>
+<script src="script.js">
+    
+</script>
+</html>

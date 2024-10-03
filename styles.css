@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.outer {
+    background-color: #020a26;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    overflow: auto;
+    padding: 10px;
+}
+
+.inner {
+    box-shadow: 0 8px 16px 0 blue;
+    border: 2px solid white;
+    margin: 20px;
+    background-color: black;
+    width: 90%;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* section 1 */
+.first {
+    color: white;
+    margin: 10px;
+    width: 100%;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    text-align: center;
+}
+
+.msg {
+    height: 75px;
+    font-size: 20px;
+    background-color: #f43535;
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 20px;
+    align-items: center;
+    transition: 0.1s ease-in;
+    display: none;
+}
+
+/* section 2 */
+.second {
+    margin: 10px 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap; /* Prevent wrapping */
+}
+
+.second-input {
+    background-color: #011433;
+    color: aliceblue;
+    width: 45%;
+    height: 45px;
+    border-radius: 10px;
+    padding-left: 8px;
+    border: 3px solid #828df8;
+    margin-bottom: 10px;
+}
+
+.second-tick {
+    border: 3px solid #1e2a38;
+    background-image: url("./icons/tick.png");
+    background-color: #828df8;
+    height: 45px;
+    width: 45px;
+    border-radius: 10px;
+    background-size: cover;
+}
+
+/* section 3 */
+.third {
+    margin: 10px 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.third-comp {
+    color: #e1e2e3;
+    background-color: #828df8;
+    width: 48%;
+    height: 45px;
+    border-radius: 10px;
+    padding-left: 8px;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* section 4 */
+.fourth {
+    margin: 15px 0;
+    width: 100%;
+    overflow-x: auto; /* Allow horizontal scrolling */
+}
+
+.fourth-table {
+    border-radius: 10px;
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto; /* Make table layout responsive */
+}
+
+.fourth-table th,
+.fourth-table td {
+    padding: 15px;
+    text-align: left;
+}
+
+.fourth-table th {
+    background-color: #011433;
+    color: #b0c4de;
+}
+
+.fourth-table td {
+    background-color: #1e2a38;
+    color: #b0c4de;
+    text-align: center;
+}
+
+.no-task {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 1.2em;
+    color: #b0c4de;
+}
+
+.actionCompleteButton {
+    background-image: url("./icons/tick.png");
+    height: 40px;
+    width: 40px;
+    background-position: center;
+    background-size: cover;
+    background-color: green;
+}
+
+.actionDeleteButton {
+    background-image: url("./icons/delete.png");
+    height: 40px;
+    width: 40px;
+    background-position: center;
+    background-size: cover;
+    background-color: red;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .second-input {
+        width: calc(40% - 10px);
+    }
+
+    .third-comp {
+        width: 100%;
+        text-align: center;
+    }
+
+    .second-tick {
+        width: 45px;
+        height: 45px;
+    }
+
+    .second {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 350px) {
+    .second-input {
+        width: calc(35% - 10px);
+        margin-bottom: 10px;
+    }
+
+    .second-tick {
+        width: 45px;
+        height: 45px;
+    }
+
+    .fourth-table {
+        display: block; 
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .fourth-table thead, .fourth-table tbody, .fourth-table th, .fourth-table td, .fourth-table tr {
+        display: block;
+    }
+
+    .fourth-table th, .fourth-table td {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .fourth-table tr {
+        margin-bottom: 10px;
+    }
+
+    .fourth-table th {
+        text-align: right;
+        padding-right: 50%;
+        position: relative;
+    }
+
+    .fourth-table th::after {
+        content: ":";
+        position: absolute;
+        right: 10px;
+    }
+
+    .fourth-table td {
+        text-align: left;
+        padding-left: 50%;
+        position: relative;
+    }
+}
